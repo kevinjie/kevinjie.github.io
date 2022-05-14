@@ -1,0 +1,9 @@
+# Redux和Vuex核心概念比较
+
+
+
+1. 一个典型的JavaScript应用有非常多的state，如何更好的管理和追踪这些状态？
+2. 在redux中store保存着应用的所有state。store通过createStore产生，而createStore接收的第一个参数是reducer，所以reducers生产了应用的store。相当于Vuex中的state，需要注意的是redux中当前的state是不变，每次更改的state都是对原来state的一份拷贝，Vuex中的state全局只有一份，更改也是更改这一份。
+3. reducer是一个函数，它接受当前的state和action，返回改变后的state。相当于Vuex中的actions对象和mutations对象
+4. action只是一个JavaScript对象，这个对象用来告诉reducer如何改变state。相当于Vuex中this.$store.dispatch中的参数
+
