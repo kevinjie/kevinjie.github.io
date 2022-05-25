@@ -1,5 +1,7 @@
 # WSL 配置前端开发环境
 
+#basic
+
 >使用debian系统
 
 ### 安装aptitude

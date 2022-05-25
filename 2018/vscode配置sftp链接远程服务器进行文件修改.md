@@ -1,5 +1,6 @@
 # vscode配置sftp链接远程服务器进行文件修改
 
+#other
 
 - 在vscode插件库中搜索sftp, 并安装插件
 - ctrl+shift+p , 输入sftp, 选择SFTP:Config,进行配置

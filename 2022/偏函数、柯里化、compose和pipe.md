@@ -1,6 +1,6 @@
 # 偏函数、柯里化、compose和pipe
 
-#partial #curry #compose #pipe
+#javascript #partial #curry #compose #pipe
 
 ## partial
 

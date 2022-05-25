@@ -1,4 +1,7 @@
 ### 前端测试是什么
+
+#test
+
 > 为检测特定的目标是否符合标准而采用专用的工具或者方法进行验证，并最终得出特定的结果。
 
    对于前端开发过程来说，这里的特定目标就是指我们写的代码，而工具就是我们需要用到的测试框架(库)、测试用例等。检测处的结果就是展示测试是否通过或者给出测试报告，这样才能方便问题的排查和后期的修正。
@@ -66,7 +69,7 @@ Jest对常见框架的支持较好，React的脚手架create-react-app内部集�
         * p模式，根据文件名称正则表达式确定哪些文件需要运行测试，需要 jest —watchAll
         * t模式，根据测试用例名称正则表达式确定哪些文件需要运行测试
         * q模式，退出测试
-+ Jest使用方法 
++ Jest使用方法
     + 初始化jest配置
       * 运行``npm jest —init``命令
       在根目录生成一个jest.config.js文件，文件中包含默认配置和注释，可以根据需求修改
@@ -75,7 +78,7 @@ Jest对常见框架的支持较好，React的脚手架create-react-app内部集�
       ```
       // fetchData.js
       import axios from 'axios'
-      
+
       export const fetchData = () => {
         return axios.get('/api').then(res => res.data)
       }
@@ -85,12 +88,12 @@ Jest对常见框架的支持较好，React的脚手架create-react-app内部集�
             fn(res.data)
         })
       }
-      
+
       // fetchData.test.js
       import { fetchData, fetchDataCallback } from './fetchData'
       import axios from 'axios'
       jest.mock('axios')
-      
+
       describe('test fetchData', async () => {
         it('test fetchData', () => {
           axios.get.mockResolvedValue({ data: 'hello' })
@@ -107,7 +110,7 @@ Jest对常见框架的支持较好，React的脚手架create-react-app内部集�
           })
         })
       })
-      
+
       ```
     + 钩子函数的使用
       ```
@@ -115,28 +118,28 @@ Jest对常见框架的支持较好，React的脚手架create-react-app内部集�
       it.each([[1, 2, 3], [1, 1, 2]])('add to be expected', (a, b, expected) => {
         expect(a + b).toBe(expected)
       })
-      
+
       // 跳过该测试用例
       it.skip('test add', () => {
         expect(1 + 2).toBe(3)
       })
-      
+
       // 只测试当前用例
       it('test only', () => {
         expect(1 + 2).toBe(3)
       })
       ```
-    + mock 
+    + mock
       * mock callback
       ```
       // callback.js
       export const runCallback = function (callback) {
         callback()
       }
-      
+
       // callback.test.js
       import { runCallback } from './callback'
-      
+
       describe('test callback mock', () => {
         it('test callback', () => {
           const func = jest.fn()
@@ -165,7 +168,7 @@ Jest对常见框架的支持较好，React的脚手架create-react-app内部集�
           }, 3000)
         }, 3000)
       }
-      
+
       // timer.test.js
       import timer from './timer'
       jest.useFakeTimers()
@@ -255,14 +258,14 @@ Jest对常见框架的支持较好，React的脚手架create-react-app内部集�
     至此Vue下的Jest测试已经安装配置好了，就是这么简单
     Jest的所有配置文件在jest.config.js中，具体配置含义可以参考官方文档。所有以.spec.js、.test.js结尾或者在__tests__中的所有文件都会被认为是测试文件。
 + vue-test-utils测试库
-        
+
   [Vue Test Utils](https://vue-test-utils.vuejs.org/zh/)
-   
+
   ```
   // example.spec.js
   import { mount } from '@vue/test-utils'
   import HelloWorld from '@/components/HelloWorld.vue'
-  
+
   describe('has a', () => {
     it('has a', () => {
     const wrapper = mount(HelloWorld)
@@ -291,7 +294,7 @@ Jest对常见框架的支持较好，React的脚手架create-react-app内部集�
      ```
     Jest的配置在package.json中，具体配置含义可以参考官方文档。所有以.spec.js、.test.js结尾或者在_tests_中的所有文件都会被认为是测试文件。
 + enzyme测试库
-  
+
   [enzyme](https://github.com/airbnb/enzyme)
   ```
   import React from 'react';

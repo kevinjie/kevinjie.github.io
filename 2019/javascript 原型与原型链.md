@@ -1,6 +1,6 @@
 # javascript 原型与原型链
 
-
+#javascript
 
 * 构造函数创建对象
 

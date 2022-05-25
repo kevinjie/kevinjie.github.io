@@ -1,6 +1,6 @@
 # 根据dockerfile安装镜像启动应用
 
-#docker #dockerfile
+#other #docker #dockerfile
 
 以koa demo为例
 

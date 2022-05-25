@@ -1,5 +1,6 @@
 # OSI 和TCP IP
 
+#internet
 
 OSI （Open System Interconnect）开放系统互联模型是一种参考标准，解释了各层之间如何相互作用。其主要包括 7 层：应用层、表示层、会话层、传输控制层、网络层、数据链路层、物理层。
 

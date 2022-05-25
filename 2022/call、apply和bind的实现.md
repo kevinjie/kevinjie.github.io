@@ -1,6 +1,6 @@
 # call、apply和bind的实现
 
-
+#javascript
 ## call
 
 ```js
@@ -14,9 +14,11 @@ Function.prototype.newCall = function(context, ...parameter) {
   const fn = Symbol()
 
   context[fn] = this
-  context[fn](...parameter)
+  const result = context[fn](...parameter)
 
   delete context[fn]
+
+  return result
 }
 ```
 
@@ -33,9 +35,11 @@ Function.prototype.newApply = function(context, parameter) {
   const fn = Symbol()
 
   context[fn] = this
-  context[fn](...parameter)
+  const result = context[fn](...parameter)
 
   delete context[fn]
+
+  return result
 }
 ```
 

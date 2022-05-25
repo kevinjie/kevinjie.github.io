@@ -1,5 +1,6 @@
 # typeof 和 instanceof的原理
 
+#javascript
 
 - typeof的原理：适合用于判断基本数据类型string，number，boolean，Symbol，null，undefinedjs在底层存储变量时，会在变量的机器码的低位1~3位存储其类型信息
 ```
