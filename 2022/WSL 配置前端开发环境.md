@@ -2,7 +2,24 @@
 
 #basic
 
->使用debian系统
+### 安装ubuntu系统
+打开PowerShell
+```
+wsl --install -d Ubuntu
+```
+### 迁移至D盘
+在D盘先新建 D:\WSL\Ubuntu，进入该目录
+```
+wsl --export Ubuntu Ubuntu.tar
+wsl --unregister Ubuntu
+wsl --import Ubuntu D:\WSL\Ubuntu Ubuntu.tar
+```
+再运行`wsl --list`查看结果
+
+### 更新和升级包
+```
+sudo apt update && sudo apt upgrade
+```
 
 ### 安装aptitude
 ```
@@ -16,7 +33,7 @@ sudo aptitude install git
 配置git
 ```
 git config --global user.name "Your Name"
-git config --global email "you@your-domain.com"
+git config --global user.email "you@your-domain.com"
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
@@ -190,8 +207,4 @@ React Developer Tools
 Unsplash Instant
 XSwitch
 tweak: mock and modify HTTP requests
-```
-### 安装graphviz
-```
-sudo aptitude install graphviz
 ```
